@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="arrow.png" type="image/png">
+    <title>YouTube Downloader</title>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        h5 {
+            text-align: center;
+            padding: 20px;
+            background-color: #0f0d0d;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            left: 40%;
+            right: 40%;
+
+        }
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        select,
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .success-message {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #4CAF50;
+        color: #fff;
+        text-align: center;
+        display: none;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: opacity 0.5s ease;
+    }
+
+    .success-message.show {
+        display: block;
+        opacity: 1;
+    }
+
+    #successMessage{
+        font-size: large;
+        background-color: aquamarine;
+    }
+    .icon_img{
+        width: 15%;
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+    </style>
+</head>
+<body>
+    <h1>YouTube Downloader</h1>
+    <!-- <form action="/download" method="post">
+        <label for="choice">Choose an option:</label>
+        <select name="choice" id="choice">
+            <option value="1">Download Single Video</option>
+            <option value="2">Download Playlist</option>
+            <option value="3">Download Channel</option>
+            <option value="4">Download MP3</option> -->
+        <!-- </select>
+        <br>
+        <label for="url">Enter URL:</label>
+        <input type="text" name="url" id="url" required>
+        <br>
+        <input type="submit" value="Download">
+    </form> -->
+
+<form action="/download" method="post">
+        <label for="choice">Choose an option:</label>
+        <select name="choice" id="choice">
+            <option value="1">Download Single Video</option>
+            <option value="2">Download Playlist</option>
+            <option value="3">Download Channel</option>
+        </select>
+        <br>
+        <label for="url">Enter URL:</label>
+        <input type="text" name="url" id="url" required>
+        <br>
+        <label for="format">Choose download format:</label>
+        <select name="format" id="format">
+            <option value="mp4">Video (MP4)</option>
+            <option value="mp3">Audio (MP3)</option>
+            <option value="avi">Audio (AVI)</option>
+        </select>
+        <br>
+        <!-- <label for="location">Specify download location:</label>
+        <input type="text" name="location" id="location" placeholder="Enter folder path">
+        <br> -->
+        <input type="submit" value="Download">
+    </form>
+    <div class="success-message" id="successMessage">
+        Finished successfully
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var successMessage = document.getElementById('successMessage');
+            if (window.location.href.indexOf("success") > -1) {
+                successMessage.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+<!-- <footer><a href="mailto: tamar.heisler1@gmail.com">tamar.heisler1@gmail.com</a></footer> -->
+<h5>              
+    <a href="mailto:tamar.heisler1@gmail.com"> <img src="https://tamarheisler.github.io/MyProfile/sendEmail.png" class="icon_img"></a> 
+    
+    <a href="https://github.com/tamarheisler"> <img src="https://tamarheisler.github.io/MyProfile/github_img.png" class="icon_img"></a> 
+</h5>
+</html>

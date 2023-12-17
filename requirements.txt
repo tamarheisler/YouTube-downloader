@@ -1,2 +1,4 @@
 Flask==2.0.1
 pytube==11.0.0
+gunicorn==20.1.0
+

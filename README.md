@@ -75,3 +75,12 @@ docker run -p 5000:5000 YouTube-downloader
 click the Bat file for windows os, and the Bash file for Unix os. 
 - all libraries will be installed automatically.
 
+
+## Screenshots
+
+  - Entering the website:
+  <img src="https://github.com/tamarheisler/YouTube-downloader/blob/master/screeshots/1.png"> <br><br>
+  - While downloading:
+  <img src="https://github.com/tamarheisler/YouTube-downloader/blob/master/screeshots/2.png"><br><br>
+  - When the download have succeed:
+  <img src="https://github.com/tamarheisler/YouTube-downloader/blob/master/screeshots/3.png"><br><br>

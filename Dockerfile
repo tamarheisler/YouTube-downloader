@@ -1,22 +1,20 @@
-# Base image
-FROM python:3.9-slim-buster
+# Use the official Python image as the base image
+FROM python:3.8-slim-buster
 
-# Set working directory
+# Set the working directory in the container
 WORKDIR /app
 
-# Copy requirements file
-COPY requirements.txt .
+# Copy the current directory contents into the container
+COPY . /app
 
-# Install dependencies
-RUN pip3 install -r requirements.txt
+# Install any needed packages specified in requirements.txt
+RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
-# Copy app files
-COPY app.py .
-COPY templates templates/
+# Make port 80 available to the world outside this container
+EXPOSE 80
 
+# Define environment variable
+ENV NAME World
 
-# Expose port
-EXPOSE 5000
-
-# Run the application
-CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
+# Run app.py when the container launches
+CMD ["python", "app.py"]

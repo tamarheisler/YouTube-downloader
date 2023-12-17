@@ -1,133 +1,105 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
 }
-
-h1,h5 {
-    text-align: center;
-    padding: 20px;
-    background-color: #000000;
+.header {
+    background-color: #000;
     color: #fff;
-}
-
-h5 {
     text-align: center;
-    padding: 20px;
-    background-color: #0f0d0d;
-    color: #fff;
-    position: fixed;
-    bottom: 0;
-    left: 40%;
-    right: 40%;
-
+    padding: 15px;
 }
-
-form {
-    max-width: 500px;
-    margin: 20px auto;
+.container {
+    width:40%;
+    margin: 50px auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-label {
-    display: block;
-    margin-bottom: 8px;
-}
-
-select,
-input {
-    width: 100%;
+.error-message {
+    background-color: rgba(255, 0, 0, 0.478);
+    margin-top: 10px;
     padding: 10px;
-    margin-bottom: 20px;
+    box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
+    display: none;
+    justify-content: center;
+    font-family: Arial Narrow, sans-serif	;
+    text-align: center;
 }
+.success-message {
+    background-color: rgba(0, 128, 0, 0.423);
+    margin-top: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: none;
+    justify-content: center;
+    font-family: Arial Narrow, sans-serif	;
+    text-align: center;
 
-input[type="submit"] {
-    background-color: #000000;
+}
+form {
+    display: grid;
+    gap: 15px;
+}
+label {
+    font-weight: bold;
+}
+input, select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
     color: #fff;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
 }
-
-input[type="submit"]:hover {
-    background-color: #555;
-}
-
-.success-message {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #4CAF50;
+/* הוסף את סגנון ה-Footer */
+.footer {
+    background-color: #000;
     color: #fff;
     text-align: center;
-    display: none;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.5s ease;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.success-message.show {
-    display: block;
-    opacity: 1;
-}
-
-#successMessage {
-    font-size: large;
-    background-color: aquamarine;
+.footer a {
+    margin: 0 10px;  /* יצר מרווח בין הקישורים */
 }
 
 .icon_img {
-    width: 15%;
-    margin-left: 8%;
-    margin-right: 8%;
+    width: 30px;  /* יצר גודל קבוע לתמונות */
+    height: 30px;
+    margin-bottom: 5px;  /* יצר מרווח מתחת לתמונות */
 }
 
-
-#loading{
-    display: none ;  
- 
+#downloadForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.displayLoading{
-    left: 100px;
-    right: 100px; 
-}
-.removeItem{
+#loadingSpinner {
     display: none;
-}
-
-
-/* ====================================== */
-/* Masseges  */
-/*====================================== */
-
-.message-success {
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-    padding: 10px;
-    color: black;
-    border: 1px solid #3A7734;
-    border-radius: 20px;
-    background-color: #b4fcad;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.message-fail {
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-    padding: 10px;
-    color: black;
-    border: 1px solid #9C1A1C;
-    border-radius: 20px;
-    background-color: #fdadaf;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100px; /* התאם לרוחב הרצוי שלך */
+    height: 100px; /* התאם לגובה הרצוי שלך */
+    margin-top: 20px; /* התאם למרחק מהטופס העליון */
 }

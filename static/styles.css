@@ -1,0 +1,133 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1,h5 {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    color: #fff;
+}
+
+h5 {
+    text-align: center;
+    padding: 20px;
+    background-color: #0f0d0d;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 40%;
+    right: 40%;
+
+}
+
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+select,
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #000000;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+.success-message {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    display: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease;
+}
+
+.success-message.show {
+    display: block;
+    opacity: 1;
+}
+
+#successMessage {
+    font-size: large;
+    background-color: aquamarine;
+}
+
+.icon_img {
+    width: 15%;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+
+#loading{
+    display: none ;  
+ 
+}
+.displayLoading{
+    left: 100px;
+    right: 100px; 
+}
+.removeItem{
+    display: none;
+}
+
+
+/* ====================================== */
+/* Masseges  */
+/*====================================== */
+
+.message-success {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    padding: 10px;
+    color: black;
+    border: 1px solid #3A7734;
+    border-radius: 20px;
+    background-color: #b4fcad;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-fail {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    padding: 10px;
+    color: black;
+    border: 1px solid #9C1A1C;
+    border-radius: 20px;
+    background-color: #fdadaf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
